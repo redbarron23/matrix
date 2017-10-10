@@ -1,3 +1,6 @@
+// courtesty of https://www.youtube.com/watch?v=Jtu6dJ0Cb94
+// using a method  to move outside of main
+
 #include <iostream>
 
 const int MATRIX_SIZE = 4;
@@ -13,6 +16,9 @@ void printMatrix(int m[MATRIX_SIZE][MATRIX_SIZE]) {
     for (int i = 0; i < MATRIX_SIZE; ++i) {
         for (int j = 0; j < MATRIX_SIZE; ++j) {
             std::cout <<  m[i][j]  << " ";
+			if (m[i][j] < 10) std::cout << "      ";   // 6 spaces
+			else if (m[i][j] < 100) std::cout << "     "; // 5 spaces
+			else std::cout << "    ";                     // 4 spaces
         }
         std::cout << std::endl;
     }
@@ -42,7 +48,7 @@ int main() {
         printMatrix(m);
 
         while (level < totNumOfLevels) {
-            for (int i = 0; i < last; ++i) {
+            for (int i = level; i < last; ++i) {
                 Swap(m[level][i], m[i][last]);
                 Swap(m[level][i], m[last][last - i + level]);
                 Swap(m[level][i], m[last -i + level][level]);
