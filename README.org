@@ -59,7 +59,7 @@ InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 
 * Directions to compile source into executable
 #+BEGIN_SRC sh
-g++ -o mattrix2 mattrix.cpp
+g++ -o mattrix2 mattrix2.cpp
 #+END_SRC
 
 * Directions to run
