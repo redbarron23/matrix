@@ -22,11 +22,7 @@ int** create2DArray(unsigned row, unsigned col) {
 }
 
 
-void Swap(int& i, int& j) {
-    int temp = i;
-    i = j;
-    j = temp;
-}
+
 
 int main () {
 
@@ -41,9 +37,9 @@ int main () {
     // print contents of the array2D
     printf("Array contents: \n");
 
-    for (int h = 0; h < row; h++) {
-         for (int w = 0; w < col; w++) {
-              printf("%i,", my2DArray[h][w]);
+    for (int i = 0; i < row; i++) {
+         for (int j = 0; j < col; j++) {
+              printf("%i,", my2DArray[i][j]);
          }
          printf("\n");
     }
