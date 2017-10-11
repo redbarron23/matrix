@@ -21,6 +21,13 @@ int** create2DArray(unsigned row, unsigned col) {
      return array2D;
 }
 
+
+void Swap(int& i, int& j) {
+    int temp = i;
+    i = j;
+    j = temp;
+}
+
 int main () {
 
     printf("Creating a 2D array2D\n");
