@@ -2,6 +2,10 @@
 
 #include <iostream>
 
+
+const int MATRIX_SIZE = 4;
+
+// create an array of N X N
 int** create2DArray(unsigned row, unsigned col) {
      int** array2D = 0;
      array2D = new int*[row];
@@ -22,8 +26,8 @@ int main () {
     printf("Creating a 2D array2D\n");
     printf("\n");
 
-    int row = 4;
-    int col = 4;
+    int row = MATRIX_SIZE;
+    int col = MATRIX_SIZE;
     int** my2DArray = create2DArray(row, col);
     printf("Array sized [%i,%i] created.\n\n", row, col);
 
